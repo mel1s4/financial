@@ -1,0 +1,363 @@
+#viroz-financial-dashborad {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0; }
+  #viroz-financial-dashborad * {
+    box-sizing: border-box; }
+  #viroz-financial-dashborad .financial-dashboard__header {
+    padding: 20px 0;
+    background-color: #e0e0e0; }
+    #viroz-financial-dashborad .financial-dashboard__header h1 {
+      text-transform: capitalize;
+      font-size: 1.2em;
+      padding: 0;
+      margin: 0;
+      font-weight: normal;
+      padding: 0 10px; }
+  #viroz-financial-dashborad .wallets {
+    padding: 10px 15px;
+    border-radius: 5px; }
+  #viroz-financial-dashborad .wallets-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 -5px; }
+  #viroz-financial-dashborad .wallet-item {
+    width: calc(25% - 20px);
+    flex-grow: 1;
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    min-width: 150px; }
+    #viroz-financial-dashborad .wallet-item.--total {
+      background-color: #333;
+      color: white; }
+    #viroz-financial-dashborad .wallet-item .name {
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      font-weight: bold; }
+    #viroz-financial-dashborad .wallet-item .balance {
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      letter-spacing: 0.08em; }
+  #viroz-financial-dashborad .add-transaction {
+    position: relative;
+    padding: 0 15px; }
+    #viroz-financial-dashborad .add-transaction .header {
+      align-items: center; }
+      #viroz-financial-dashborad .add-transaction .header h2 {
+        font-size: 1.2em; }
+  #viroz-financial-dashborad .actions {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+    #viroz-financial-dashborad .actions label {
+      display: inline-block;
+      margin-right: 0.5em; }
+    #viroz-financial-dashborad .actions input {
+      width: 15px; }
+    #viroz-financial-dashborad .actions .button {
+      appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      display: inline-block;
+      margin-left: 1em;
+      padding: 1em 2em;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background-color: #059;
+      color: white;
+      cursor: pointer; }
+      #viroz-financial-dashborad .actions .button[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed; }
+    @media (max-width: 640px) {
+      #viroz-financial-dashborad .actions {
+        position: relative; } }
+  #viroz-financial-dashborad .add-transaction__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px; }
+    #viroz-financial-dashborad .add-transaction__form .input-group {
+      width: 33%;
+      padding: 5px;
+      min-width: 150px;
+      flex-grow: 1; }
+      @media (max-width: 640px) {
+        #viroz-financial-dashborad .add-transaction__form .input-group {
+          width: 100%; } }
+    #viroz-financial-dashborad .add-transaction__form .--number-signs {
+      width: auto;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      padding-bottom: 8px; }
+      #viroz-financial-dashborad .add-transaction__form .--number-signs button {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 40px;
+        height: 40px;
+        display: inline-blok;
+        font-size: 30px;
+        padding: 0;
+        margin: 0;
+        margin-right: 5px;
+        opacity: 0.5;
+        transition: all 0.5s ease;
+        border-radius: 5px;
+        color: white;
+        border: 2px solid;
+        line-height: 1; }
+        #viroz-financial-dashborad .add-transaction__form .--number-signs button.--active {
+          opacity: 1; }
+        #viroz-financial-dashborad .add-transaction__form .--number-signs button.--subtract {
+          border-color: #cc0033;
+          background-color: red; }
+        #viroz-financial-dashborad .add-transaction__form .--number-signs button.--add {
+          border-color: darkgreen;
+          background-color: green; }
+      #viroz-financial-dashborad .add-transaction__form .--number-signs + .input-group {
+        max-width: calc(100% - 90px);
+        flex-grow: 1; }
+    #viroz-financial-dashborad .add-transaction__form fieldset {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+  #viroz-financial-dashborad .wallet-options {
+    padding: 0;
+    list-style: none; }
+  #viroz-financial-dashborad .wallet-option-item {
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0; }
+    #viroz-financial-dashborad .wallet-option-item input[checked=checked] + span {
+      background-color: blue;
+      color: white; }
+    #viroz-financial-dashborad .wallet-option-item label {
+      margin: 0;
+      display: inline-block; }
+    #viroz-financial-dashborad .wallet-option-item .name {
+      margin: 0;
+      padding: 0.5em;
+      font-weight: bold;
+      width: 100%;
+      font-size: 12px;
+      border-radius: 5px;
+      background-color: #ccc;
+      display: inline-block; }
+      #viroz-financial-dashborad .wallet-option-item .name.--active {
+        background-color: blue;
+        color: white; }
+  #viroz-financial-dashborad .transaction-history {
+    padding: 0 15px;
+    margin: 0 -5px;
+    width: 100%; }
+    #viroz-financial-dashborad .transaction-history .table__wrapper {
+      width: 100%;
+      overflow: auto; }
+    #viroz-financial-dashborad .transaction-history table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0; }
+      #viroz-financial-dashborad .transaction-history table thead {
+        background-color: #333;
+        color: white; }
+        #viroz-financial-dashborad .transaction-history table thead th {
+          padding: 0.5em 1em;
+          text-align: left;
+          border-bottom: 1px solid #ccc; }
+      #viroz-financial-dashborad .transaction-history table tbody tr {
+        border-bottom: 1px solid #ccc; }
+        #viroz-financial-dashborad .transaction-history table tbody tr td {
+          padding: 0.5em 1em;
+          text-align: left; }
+        #viroz-financial-dashborad .transaction-history table tbody tr p {
+          padding: 0;
+          margin: 0; }
+      #viroz-financial-dashborad .transaction-history table .date {
+        width: 150px; }
+      #viroz-financial-dashborad .transaction-history table .quantity {
+        width: 80px; }
+      #viroz-financial-dashborad .transaction-history table .wallet {
+        width: 80px; }
+      #viroz-financial-dashborad .transaction-history table .delete .button {
+        cursor: pointer;
+        appearance: none;
+        border: 1px solid #999;
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 0.4em 0.6em;
+        margin: 0.5em 0.5em 0.5em 0em; }
+        #viroz-financial-dashborad .transaction-history table .delete .button[disabled] {
+          opacity: 0.5;
+          cursor: not-allowed; }
+      #viroz-financial-dashborad .transaction-history table .delete .--delete {
+        border-color: rgba(150, 0, 0, 0.5);
+        color: rgba(200, 0, 0, 0.8); }
+  #viroz-financial-dashborad #graph {
+    padding: 0 15px; }
+  #viroz-financial-dashborad .graph__params {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #viroz-financial-dashborad .graph__params .input-group {
+      width: calc(25% - 20px);
+      flex-grow: 1;
+      margin: 5px;
+      padding: 10px;
+      min-width: 150px; }
+  #viroz-financial-dashborad .graph__wrapper {
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 1em 0; }
+    #viroz-financial-dashborad .graph__wrapper .graph-balances {
+      display: flex;
+      flex-wrap: nowrap;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+  #viroz-financial-dashborad .graph-balance {
+    height: 100%;
+    width: 10px;
+    position: relative;
+    padding: 2px 5px; }
+    #viroz-financial-dashborad .graph-balance.--today {
+      background-color: #eee;
+      color: white; }
+    #viroz-financial-dashborad .graph-balance:hover .graph-unit-line {
+      background-color: blue; }
+    #viroz-financial-dashborad .graph-balance:hover .date,
+    #viroz-financial-dashborad .graph-balance:hover .balance {
+      z-index: 1;
+      opacity: 1; }
+    #viroz-financial-dashborad .graph-balance .date,
+    #viroz-financial-dashborad .graph-balance .balance {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      background-color: white;
+      padding: 0.5em;
+      font-size: 12px;
+      border-radius: 5px;
+      border: 1px solid blue; }
+    #viroz-financial-dashborad .graph-balance .balance {
+      transform: translate(-50%, 100%); }
+    #viroz-financial-dashborad .graph-balance .graph-unit-line {
+      border-radius: 5px 5px 2px 2px;
+      display: block;
+      background-color: green;
+      border: 1px solid darkgreen;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      animation: graph-animation 1s ease-in; }
+@keyframes graph-animation {
+  0% {
+    max-height: 0; }
+  100% {
+    max-height: 100%; } }
+  #viroz-financial-dashborad .next-transactions {
+    padding: 0 15px; }
+  #viroz-financial-dashborad .next-transactions-list {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    #viroz-financial-dashborad .next-transactions-list .next-transaction__wrapper {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 5px;
+      padding-bottom: 5px; }
+    #viroz-financial-dashborad .next-transactions-list .next-transaction {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.5em;
+      width: 100%; }
+      #viroz-financial-dashborad .next-transactions-list .next-transaction .content {
+        flex-grow: 1;
+        width: 50%; }
+      #viroz-financial-dashborad .next-transactions-list .next-transaction .next-transaction__actions {
+        width: auto;
+        white-space: nowrap; }
+    #viroz-financial-dashborad .next-transactions-list p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      display: inline-block;
+      margin-right: 0.5em; }
+    #viroz-financial-dashborad .next-transactions-list .quantity {
+      padding: 0.1em 0.3em;
+      border: 1px solid #aaa;
+      border-radius: 3px; }
+      #viroz-financial-dashborad .next-transactions-list .quantity.--negative {
+        border-color: rgba(150, 0, 0, 0.5);
+        color: rgba(200, 0, 0, 0.8); }
+    #viroz-financial-dashborad .next-transactions-list .notes {
+      font-weight: bold; }
+    #viroz-financial-dashborad .next-transactions-list .repeats {
+      width: 100%;
+      font-style: italic; }
+    #viroz-financial-dashborad .next-transactions-list .next-transaction__actions .button {
+      cursor: pointer;
+      appearance: none;
+      border: 1px solid #999;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 0.4em 0.6em;
+      margin: 0.5em 0.5em 0.5em 0em; }
+      #viroz-financial-dashborad .next-transactions-list .next-transaction__actions .button[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed; }
+    #viroz-financial-dashborad .next-transactions-list .next-transaction__actions .--delete {
+      border-color: rgba(150, 0, 0, 0.5);
+      color: rgba(200, 0, 0, 0.8); }
+    #viroz-financial-dashborad .next-transactions-list .next-transaction__actions .--create {
+      background-color: #059;
+      color: white;
+      border-color: #038; }
+
+#viroz-financial {
+  background-color: #f0f0f0;
+  padding: 0;
+  margin: 0; }
+  #viroz-financial * {
+    font-family: sans-serif; }
+  #viroz-financial input:not([type="checkbox"]),
+  #viroz-financial textarea,
+  #viroz-financial select {
+    display: block;
+    width: 100%;
+    border: 0;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0.5em;
+    height: 2.2em;
+    resize: none;
+    border: 1px solid #ccc;
+    line-height: 1; }
+  #viroz-financial textarea {
+    overflow: auto; }
+
+/*# sourceMappingURL=styles.css.map */
